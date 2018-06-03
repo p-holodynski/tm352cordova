@@ -56,7 +56,7 @@ var app = {
                 var widgn = get_name_value("widgetID");
                 if (widgn != undefined){
 
-                    var get_param = "http://137.108.93.222/openstack/api/widgets/" + widgn + "?OUCU=user1&password=password";
+                    var get_param = "http://137.108.93.222/openstack/api/widgets/" + widgn + "?OUCU=&password=";
                     //alert(get_param);
                     $.get(get_param, function (data) {
                         //alert("back from get with data=" + data);
@@ -75,7 +75,6 @@ var app = {
                             var url_image = obj.data[0].url;
                             //alert(url_image);
                             document.getElementById('image').innerHTML = '<img src="' + url_image + '" />';   // This may require some Googling
-                            
                         }
                     });
                 }
@@ -94,7 +93,7 @@ var app = {
                     }
                     widgn = widgn.toString();
 
-                    var get_param = "http://137.108.93.222/openstack/api/widgets/" + widgn + "?OUCU=user1&password=password";
+                    var get_param = "http://137.108.93.222/openstack/api/widgets/" + widgn + "?OUCU=&password=";
                     //alert(get_param);
                     $.get(get_param, function (data) {
                         //alert("back from get with data=" + data);
@@ -113,9 +112,7 @@ var app = {
                             var url_image = obj.data[0].url;
                             //alert(url_image);
                             document.getElementById('image').innerHTML = '<img src="' + url_image + '" />';   // This may require some Googling
-                            
                             document.getElementById('widgetID').value = widgn;
-                            
                         }
                     });
                 }
@@ -135,7 +132,7 @@ var app = {
                     widgn = widgn.toString();
                     //alert('need to get widget id: ' + widgn);
 
-                    var get_param = "http://137.108.93.222/openstack/api/widgets/" + widgn + "?OUCU=user1&password=password";
+                    var get_param = "http://137.108.93.222/openstack/api/widgets/" + widgn + "?OUCU=&password=";
                     //alert(get_param);
                     $.get(get_param, function (data) {
                         //alert("back from get with data=" + data);
@@ -154,9 +151,7 @@ var app = {
                             var url_image = obj.data[0].url;
                             //alert(url_image);
                             document.getElementById('image').innerHTML = '<img src="' + url_image + '" />';   // This may require some Googling
-                            
                             document.getElementById('widgetID').value = widgn;
-                            
                         }
                     });
                 }
