@@ -38,19 +38,24 @@
             <p id="image"></p>
             <p id="descr"></p>
             <b>Widget price = <b id="price"></b></b>
-            <br>
+            <p></p>
             <b>Widget ID (in range 8 to 17): <input type="text" id="widgetID"></b>
-            <br>
-            <b>Agreed price: <input type="text" id="price"></b>
-            <br>
+            <b>Agreed price: <input type="text" id="agreedPrice"></b>
             <b>Number of items: <input type="text" id="number"></b>
 	        </div>
             <div data-role="controlgroup" data-type="horizontal">
             <!-- TODO IV. Order navigation buttons and display -->
-            <button type=button "background-color:lightgrey" id="prevOrder" onclick="app.taxiShare.start()"><b>Prev Order</b></button>
-            <button type=button "background-color:lightgrey" id="nextOrder" onclick="app.taxiShare.start()"><b>Next Order</b></button>
-            <button type=button "background-color:lightgrey" id="addToOrder" onclick="app.taxiShare.start()"><b>Add to Order</b></button>
-            
+            <button type=button "background-color:lightgrey" id="createOrder" onclick="app.getWidget.createOrder()"><b>Create Order</b></button>
+            <button type=button "background-color:lightgrey" id="addToOrder" onclick="app.getWidget.addToOrder()"><b>Add to Order</b></button>
+            <button type=button "background-color:lightgrey" id="getAddress" onclick="app.getWidget.getAddress()"><b>getAddress</b></button>
+            <p></p>
+            <br>
+            <b>Current Order: <input type="text" id="currentOrder"></b>
+            <button type=button "background-color:lightgrey" id="displayOrder" onclick="app.getWidget.displayOrder()"><b>Display Order</b></button>
+            <br>
+            <p></p>
+            <br>
+            <ul id="orderList" style="list-style-type: none"></ul>
             <button type=button style="width:100%;background-color:lightgrey" id="placeOrder" onclick="app.taxiShare.start()"><b>Place New Order</b></button>
             
             </div>
